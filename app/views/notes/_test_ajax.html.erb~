@@ -1,0 +1,6 @@
+<p>Date: <input type="text" onchange="DateFilterChange(this);"></p>
+<%= link_to "hello", hello_notes_path, id: 'date_filter_link_base' %>
+<%= link_to "hello", hello_notes_path, id: 'date_filter_link', :remote => true %>
+<div id='time_div'></div>
+
+<p>Date2: <input type="text" id="datepicker"></p>

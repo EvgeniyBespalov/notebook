@@ -1,0 +1,2 @@
+$("#time_div").html("<%=@notes.count%>");
+$("#DivNoteList").html("<%=escape_javascript(render partial: 'notes_list')%>");

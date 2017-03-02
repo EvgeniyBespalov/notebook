@@ -1,0 +1,4 @@
+<%= render partial: 'note_menu'%>
+<%= render partial: 'date_filter'%>
+<div id="DivNoteList"><%= render partial: 'notes_list'%></div>
+<%= render partial: 'test_ajax'%>

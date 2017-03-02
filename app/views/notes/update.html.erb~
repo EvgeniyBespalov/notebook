@@ -1,0 +1,2 @@
+<p>Обновление</p>
+<%= render partial: "note_edit"%>

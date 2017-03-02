@@ -1,0 +1,10 @@
+<div style = "float: left; height: 30px;">
+	<%= button_to "Главная страница", '/notes', :class => "menu_link", :method => :get%>
+</div>
+<div style = "float: left; height: 30px;">
+	<%= button_to "Создать", '/notes/new', :class => "menu_link", :method => :get%>
+</div>
+<div style = "float: rigth; height: 30px;">
+	<%= render partial: "user"%>
+</div>
+</br>

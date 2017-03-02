@@ -1,0 +1,3 @@
+<%= render partial: "note_menu"%>
+<%= render partial: "note_edit"%>
+

@@ -1,0 +1,31 @@
+	<table class="tableNote">
+			 <tr>
+			   <th colspan="5">Список заметок</th>
+			 </tr>
+			 <tr>
+			   <th>Тема</th>
+			   <th>Дата</th>
+			   <th>Просмотр</th>
+			   <th>Редактировать</th>
+			   <th>Удалить</th>
+			 </tr>
+				<% @notes.each do |n|%>
+					<tr>
+						<td>
+							<%= n.header%>
+						</td>
+						<td>
+							<%= n.date.strftime("%d %m %Y %H:%M:%S")%>
+						</td>
+						<td>
+							<%= link_to 'Просмотр', n%>
+						</td>
+						<td>
+							<%= link_to 'Редактирование', edit_note_path(n), method: :get%>
+						</td>
+						<td>
+							<%= link_to 'Удалить', n, method: :delete, data: {confirm: "Действительно удалить заметку " + n.header + "?"} %>
+						</td>
+					</tr>
+				<%end%>
+	</table>

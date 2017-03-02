@@ -1,0 +1,29 @@
+<%= form_for :user do |f|%>
+<table class = "tableUser">
+  <tr>
+    <td>
+      <%= t('login') %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.text_field :login%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= t('password') %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.password_field :password%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.button "Войти"%>
+    </td>
+  </tr>	
+</table>
+<% end %>

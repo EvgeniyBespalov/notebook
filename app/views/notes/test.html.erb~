@@ -1,0 +1,6 @@
+<%= form_for @note do |f|%>
+  <p>Тема</p>
+	<p><%= @note.header %></p>	
+  <p>Текст</p>
+	<p><%= @note.text %></p>
+<%end%>

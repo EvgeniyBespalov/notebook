@@ -1,0 +1,15 @@
+<%= form_tag hello_notes_path, remote: true, :html => {:'data-type' => 'json'} do |f|%>
+<table>
+  <tr>
+    <td>Фильтр</td>
+    <td>
+			<%= select_day @date_filter.day %>
+			<%= select_month @date_filter.month %>
+			<%= select_year @date_filter.year %>
+    </td>
+    <td>
+      <%= submit_tag 'Обновить данные' %>
+    </td>
+  </tr>
+</table>
+<%end%>

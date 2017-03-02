@@ -1,0 +1,17 @@
+  <tr>
+    <td>Тема</td>
+    <td><%= @note.header, class: 'textWidth100' %></td>
+  </tr>
+  <tr>
+    <td>Текст</td>
+    <td><%= @note.text, class: 'textWidth100' %></td>
+  </tr>
+	<tr>
+    <td>Метки</td>
+    <td>
+      <% @note_tags.each do |nt|  %>
+        <%= check_box_tag "note_tags[]", nt.id, @note.note_tags.exists?(nt.id) %>
+        <%= nt.description  %>
+      <% end %>
+    </td>
+  </tr> 
