@@ -60,7 +60,7 @@ class NotesController < ApplicationController
     @note = Note.find(params.require(:id))
     @note_tags = NoteTag.all
 
-    unless params[:note_tags].nil?
+    if params[:note_tags].present?
       @note.note_tags = NoteTag.find params[:note_tags]	
     else
       @note.note_tags.delete_all
