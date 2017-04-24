@@ -20,7 +20,7 @@ class NotesController < ApplicationController
 
   def index    
     @notes = Note.where(user_id: @user.id).order(date: :desc)
-    @date_filter = (@notes.count > 0) ? @notes.last.date : DateTime.Now
+    @date_filter = (@notes.count > 0) ? @notes.last.date : DateTime.now
   end
   
   def new
